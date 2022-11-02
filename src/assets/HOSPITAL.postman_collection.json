@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "6920487d-d6a1-42b1-8cf9-401fcd039420",
+		"name": "HOSPITAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9024922"
+	},
+	"item": [
+		{
+			"name": "ListAllPatient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{node_base}}/v1/citas/listar",
+					"host": [
+						"{{node_base}}"
+					],
+					"path": [
+						"v1",
+						"citas",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListOnePatient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{node_base}}/v1/citas/mostrar/6361b8879e3c7e01df5fc903",
+					"host": [
+						"{{node_base}}"
+					],
+					"path": [
+						"v1",
+						"citas",
+						"mostrar",
+						"6361b8879e3c7e01df5fc903"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePatient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Elizabeth Rios\",\r\n    \"dni\": \"74123454\",\r\n    \"phone\": \"987456321\",\r\n    \"email\": \"elizabeth@gmail.com\",\r\n    \"dayAppointment\": \"2023/01/09\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{node_base}}/v1/citas/crear",
+					"host": [
+						"{{node_base}}"
+					],
+					"path": [
+						"v1",
+						"citas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePatient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Elizabeth Marilu Ochoa Rios\",\r\n    \"dni\": \"71223149\",\r\n    \"phone\": \"922286671\",\r\n    \"email\": \"elizabeth@gmail.com\",\r\n    \"dayAppointment\": \"2023/01/30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{node_base}}/v1/citas/actualizar/6361b8879e3c7e01df5fc903",
+					"host": [
+						"{{node_base}}"
+					],
+					"path": [
+						"v1",
+						"citas",
+						"actualizar",
+						"6361b8879e3c7e01df5fc903"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{node_base}}/v1/citas/eliminar/6361b8879e3c7e01df5fc903",
+					"host": [
+						"{{node_base}}"
+					],
+					"path": [
+						"v1",
+						"citas",
+						"eliminar",
+						"6361b8879e3c7e01df5fc903"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
