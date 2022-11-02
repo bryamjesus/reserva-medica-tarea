@@ -6,9 +6,8 @@ const patientSchema = new Schema({
   dni: { type: String, require: true },
   phone: { type: String, require: true },
   email: { type: String, require: true },
-  date: { type: Date, require: true }
-}, {
-  versionKey: false
+  dayAppointment: { type: Date, require: true },
+  dateOrder: { type: Date, default: Date.now() }
 })
 
 module.exports = mongoose.model('patient', patientSchema)
